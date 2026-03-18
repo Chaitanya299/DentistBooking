@@ -1,4 +1,11 @@
 {
+  "name": "dentist-booking-root",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node backend/server.js",
+    "build": "cd backend && npm install",
+    "postinstall": "cd backend && npm install"
+  },
   "dependencies": {
     "mongodb": "^7.1.0"
   }

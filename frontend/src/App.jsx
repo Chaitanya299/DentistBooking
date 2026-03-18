@@ -399,6 +399,15 @@ function BookingModal({ dentist, onClose, onSuccess }) {
     setLoading(true);
     setError('');
 
+    // Date Validation
+    const selectedDate = new Date(formData.appointmentDate);
+    const now = new Date();
+    if (selectedDate < now) {
+      setError('Please select a future date and time');
+      setLoading(false);
+      return;
+    }
+
     try {
       await axios.post(`${API_URL}/appointments`, {
         ...formData,

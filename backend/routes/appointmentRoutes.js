@@ -17,6 +17,13 @@ router.get('/', auth, async (req, res) => {
 // @desc    Create an appointment
 // @route   POST /api/appointments
 router.post('/', async (req, res) => {
+  const { appointmentDate } = req.body;
+
+  // Server-side validation
+  if (new Date(appointmentDate) < new Date()) {
+    return res.status(400).json({ message: 'Appointment date must be in the future' });
+  }
+
   const appointment = new Appointment({
     dentist: req.body.dentist,
     patientName: req.body.patientName,
