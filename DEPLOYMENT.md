@@ -1,19 +1,18 @@
 # 🚀 Simple Deployment Guide
 
-Follow these exact steps to get your Dentist Booking Platform live.
+Follow these steps to get your Dentist Booking Platform live.
 
 ## 1. Backend (Render.com)
-Render is the simplest way to host your Node.js backend.
+Render hosts your Node.js backend.
 
 1.  **Create an account** at [render.com](https://render.com/).
 2.  Click **"New +"** -> **"Web Service"**.
 3.  Connect your GitHub repository.
 4.  **Configuration:**
     *   **Name:** `dentist-booking-backend`
-    *   **Root Directory:** `backend` (⚠️ **CRITICAL STEP**)
     *   **Runtime:** `Node`
     *   **Build Command:** `npm install`
-    *   **Start Command:** `node server.js`
+    *   **Start Command:** `node server.js` (This now works automatically!)
 5.  **Environment Variables (Click "Advanced"):**
     *   `MONGO_URI`: (Your MongoDB Atlas URI)
     *   `JWT_SECRET`: `dentalcare_secret_2024`
@@ -25,14 +24,14 @@ Render is the simplest way to host your Node.js backend.
 ---
 
 ## 2. Frontend (Vercel.com)
-Vercel is the best way to host your React frontend.
+Vercel hosts your React frontend.
 
 1.  **Create an account** at [vercel.com](https://vercel.com/).
 2.  Click **"Add New"** -> **"Project"**.
 3.  Import your GitHub repository.
 4.  **Edit Settings:**
     *   **Framework Preset:** `Vite`
-    *   **Root Directory:** `frontend` (⚠️ **CRITICAL STEP**)
+    *   **Root Directory:** `frontend` (⚠️ **IMPORTANT**)
 5.  **Environment Variables:**
     *   `VITE_API_URL`: (Paste your Render Backend URL here + `/api`)
         *   *Example:* `https://dentistbooking-7mie.onrender.com/api`
@@ -41,6 +40,6 @@ Vercel is the best way to host your React frontend.
 ---
 
 ## ✅ Deployment Checklist
-*   [ ] Backend status is "Live" on Render.
-*   [ ] Frontend status is "Ready" on Vercel.
-*   [ ] **MongoDB Atlas:** Ensure your IP Whitelist allows `0.0.0.0/0` (Access from anywhere) so the Render server can connect.
+*   [ ] Backend is "Live" on Render.
+*   [ ] Frontend is "Ready" on Vercel.
+*   [ ] **MongoDB Atlas:** Ensure your IP Whitelist allows `0.0.0.0/0` (Access from anywhere).
