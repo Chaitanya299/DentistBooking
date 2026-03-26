@@ -87,14 +87,5 @@ Access the **Admin Panel** via the navigation bar:
 
 ---
 
-## ✅ Evaluation Criteria Met
-- **Code Quality:** Modular architecture with reusable components and clean logic.
-- **API Design:** RESTful standards with secure, JWT-protected endpoints.
-- **UI/UX:** Modern, responsive design using Tailwind CSS with clear loading/error states.
-- **Responsiveness:** Fully optimized for Mobile, Tablet, and Desktop views.
-- **Bonus Implementation:** Exceeded requirements with Auth, Search, Filters, Pagination, and Status Control.
-
----
-
 ## 📄 License
 This project is open-source and available under the **MIT License**.
